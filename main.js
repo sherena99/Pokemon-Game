@@ -1,6 +1,11 @@
 const NUM_PLANTS = 50
 const NUM_POKEBALLS= 6
 
+const player =document.querySelector('.player')
+const player_pos = {
+    x: parseInt(window.innerWidth / 2),
+    y: parseInt(window.innerHeight / 2)
+}
 
 function createPlants(){
     for(let i = 0; i < NUM_PLANTS; i++){
