@@ -1,12 +1,11 @@
 const NUM_PLANTS = 50
 const NUM_POKEBALLS= 6
 
-const player =document.querySelector('.player')
+const player = document.querySelector('.player')
 const player_pos = {
     x: parseInt(window.innerWidth / 2),
     y: parseInt(window.innerHeight / 2)
 }
-
 const player_vel = {
     x: 0,
     y: 0
