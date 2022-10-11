@@ -7,6 +7,11 @@ const player_pos = {
     y: parseInt(window.innerHeight / 2)
 }
 
+const player_vel = {
+    x: 0,
+    y: 0
+}
+
 function createPlants(){
     for(let i = 0; i < NUM_PLANTS; i++){
         const div = document.createElement('div')
@@ -27,9 +32,23 @@ function createPokeBalls(){
 
 }
 
+function run(){
+    player_pos.x += player_vel.x
+    player_pos.y += player_vel.y
+
+    player.style.left = player_pos.x + 'px'
+    player.style.bottom = player_pos.y + 'px'
+    
+    checkCollisions()
+
+    requestAnimationFrame(run)
+}
+
+
 function init(){
     createPlants()
     createPokeBalls()
+    run()
 }
 
 init()
