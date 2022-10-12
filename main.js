@@ -11,6 +11,7 @@ const player_vel = {
     y: 0
 }
 const balls = []
+const sound = new Audio('assets/coin.mp3')
 
 
 function createPlants(){
